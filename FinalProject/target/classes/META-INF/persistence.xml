@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="FinalProject">
+	
+	<!-- Add entities or models created for by me for -->
+	<class>com.entities.Bank</class>
+	<class>com.entities.Customer</class>
+	<class>com.entities.Account</class>
+	<class>com.entities.Payment</class>
+	
+	<!-- Persistence -->
+		<properties>
+			<property name="javax.persistence.jdbc.driver" value="org.mariadb.jdbc.Driver"/>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mariadb://localhost:3306/test?useSSl=false" />
+			<property name="javax.persistence.jdbc.user" value="Victor"/>
+			<property name="javax.persistence.jdbc.password" value=""/>
+			
+			<property name="eclipselink.ddl-generation" value="create-tables"/>
+			<property name="eclipselink.target-database" value="MYSQL"/>
+			<property name="eclipselink.logging.level" value="FINE"/> <!-- FINE or OFF -->
+		</properties>
+
+	</persistence-unit>
+</persistence>
